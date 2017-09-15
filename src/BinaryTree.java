@@ -9,6 +9,10 @@ public class BinaryTree {
 		
 		int height = traverseNode(root);
 		System.out.println("Height = " + --height);
+		
+		System.out.println("Printing leaf nodes");
+		printLeafNodes(root);
+		
 	}
 	
 	private static Node buildTree(){
@@ -54,6 +58,16 @@ public class BinaryTree {
 		int rightHeight = 1 + traverseNode(node.rightChild);
 		
 		return Math.max(leftHeight, rightHeight);
+	}
+	
+	private static void printLeafNodes(Node node){
+		if(node == null)
+			return;
+		if(node.leftChild == null && node.rightChild == null)
+			System.out.println(node.value);
+		
+		printLeafNodes(node.leftChild);
+		printLeafNodes(node.rightChild);
 	}
 }
 

@@ -4,7 +4,7 @@ public class LongestSubstringWithoutRepeatingCharacter {
 
 	public static void main(String[] args) {
 		
-		String str = "abhdhknxkjankzj";
+		String str = "dbxhsxnlkjhgfdsapoiu snanm m ";
 		String result = "";
 		int index = 0;
 		ArrayList<Character> list = new ArrayList<Character>();
